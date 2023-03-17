@@ -2,7 +2,6 @@ import {Container, Row, Col} from "react-bootstrap"
 import Carousel from "react-multi-carousel"
 import 'react-multi-carousel/lib/styles.css'
 import meter1 from "../assets/img/meter1.svg"
-import meter2 from "../assets/img/meter2.svg"
 import meter3 from "../assets/img/meter3.svg"
 import colorSharp from "../assets/img/color-sharp.png"
 
@@ -35,30 +34,30 @@ export const Skills=()=>{
                         <h2>
                             Skills
                         </h2>
-                        <p>Lorem</p>
+                        <p>Javascript, CSS, HTML, Express, Node.js, React, Python, Django, Flask, PostgresSQL, EJS, GitHub, MongoDB, REST APIs, JQuery, Strategy and Operations, Project Manager, Strategic Partnerships, Negotiation, Business Development</p>
                         <Carousel responsive={responsive} infinite={true} className="skill-slider">
                             <div className="item">
                                 <img src={meter1} alt="Image" />
-                                <h5>Web Development</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="Image" />
-                                <h5>Brand Identity</h5>
+                                <h5>Full-Stack Development</h5>
                             </div>
                             <div className="item">
                                 <img src={meter3} alt="Image" />
-                                <h5>Logo Design</h5>
+                                <h5>Backend Development</h5>
+                            </div>
+                            <div className="item">
+                                <img src={meter3} alt="Image" />
+                                <h5>Frontend Development</h5>
                             </div>
                             <div className="item">
                                 <img src={meter1} alt="Image" />
-                                <h5>Web Development</h5>
+                                <h5>Strategic Partnerships</h5>
                             </div>
                         </Carousel>
                     </div>
                     </Col>
                 </Row>
             </Container>
-            <img className="background-image-lfet" src={colorSharp} />
+            <img className="background-image-left" src={colorSharp} />
         </section>
         )
 }
