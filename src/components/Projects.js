@@ -1,10 +1,11 @@
 import { Tab } from "react-bootstrap";
 import {Container, Col, Row, Nav} from "react-bootstrap"
 import {ProjectCard} from "./ProjectCard"
-import colorSharp2 from "../assets/img/color-sharp2.png"
 import projImg1 from "../assets/img/project-img1.png"
 import projImg2 from "../assets/img/project-img2.png"
 import projImg3 from "../assets/img/project-img3.png"
+import comingsoon from "../assets/img/comingsoon.gif"
+import 'animate.css'
 import TrackVisibility from "react-on-screen";
 
 
@@ -12,47 +13,32 @@ import TrackVisibility from "react-on-screen";
 export const Projects = ()=>{
 const projects=[
     {
-        title: "Business Startup",
-        description: "Design & Development",
-        imgUrl: projImg1,
+        title: "Art for Everyone",
+        description: "Frontend App",
+        imgUrl: comingsoon,
       },
       {
-        title: "Business Startup",
-        description: "Design & Development",
-        imgUrl: projImg2,
+        title: "My Habit Tracker",
+        description: "Backend App",
+        imgUrl: comingsoon,
       },
       {
-        title: "Business Startup",
-        description: "Design & Development",
-        imgUrl: projImg3,
+        title: "Job Tracker",
+        description: "Fullstack App",
+        imgUrl: comingsoon,
       },
-      {
-        title: "Business Startup",
-        description: "Design & Development",
-        imgUrl: projImg1,
-      },
-      {
-        title: "Business Startup",
-        description: "Design & Development",
-        imgUrl: projImg2,
-      },
-      {
-        title: "Business Startup",
-        description: "Design & Development",
-        imgUrl: projImg3,
-      },
+   
 ]
 
     return (
       <section className="projects" id="projects">
         <Container>
-          <Row>
-            <Col>
+        <Row>
+          <Col size={12}>
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                <h2>Projects</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <h2 className="glow">Projects</h2>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
@@ -67,11 +53,11 @@ const projects=[
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                     <Tab.Pane eventKey="first">
-                      <Row>
+                      <Row className="flex-container">
                         {
                           projects.map((project, index) => {
                             return (
-                              <ProjectCard
+                              <ProjectCard 
                                 key={index}
                                 {...project}
                                 />
@@ -90,10 +76,9 @@ const projects=[
                 </Tab.Container>
               </div>}
             </TrackVisibility>
-            </Col>
-          </Row>
-        </Container>
-        <img className="background-image-right" src={colorSharp2} />
+          </Col>
+        </Row>
+      </Container>
       </section>
     );
 }

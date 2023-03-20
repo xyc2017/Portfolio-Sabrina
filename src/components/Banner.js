@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import {Container, Row, Col} from "react-bootstrap"
 import {ArrowRightCircle} from "react-bootstrap-icons"
-import female from "../assets/img/female.png"
+import sabrina from "../assets/img/sabrina.jpg"
 import "animate.css"
 import TrackVisibility from "react-on-screen"
 
@@ -12,7 +12,7 @@ export const Banner = () => {
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
     const [index, setIndex] = useState(1);
-    const toRotate = [ "Web Developer", "Strategic Partnership Manager" ];
+    const toRotate = [ "Software Engineer", "Strategic Partnership Manager" ];
     const period = 2000;
   
     useEffect(() => {
@@ -64,7 +64,7 @@ export const Banner = () => {
                         </TrackVisibility>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
-                        <img src={female} alt="Female Img" />
+                        <img className="profile-pic"  src={sabrina} alt="pic" />
                     </Col>
                 </Row>
             </Container>

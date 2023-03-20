@@ -41,9 +41,9 @@ const onUpdateActiveLink=(value)=>{
                 </Nav>
                 <span className="navbar-text">
                     <div className="social-icon">
-                        <a href="#"><img src={navIcon1} alt="" /></a>
-                        <a href="#"><img src={navIcon2} alt="" /></a>
-                        <a href="#"><img src={navIcon3} alt="" /></a>
+                    <a href="https://www.linkedin.com/in/sabrinaxchen/" target="_blank"><img className="linkedin"  src={navIcon1} alt="" /></a>
+                    <a href="https://www.facebook.com/xiangwen1212" target="_blank"><img className="facebook" src={navIcon2} alt="" /></a>
+                    <a href="https://www.instagram.com/bribrina_c/" target="_blank"><img className="instagram" src={navIcon3} alt="" /></a>
                     </div>
                     <button className="vvd" onClick={()=>console.log('connect')}><span>Let's Connect</span></button>
                 </span>
